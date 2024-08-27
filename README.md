@@ -27,7 +27,6 @@ For inquiries or further information, please reach out to:
 
 - **Name**: Sanjay Barman
 - **Email**: [sanjaybarman1179@gmail.com](mailto:sanjaybarman1179@gmail.com)
-- **GitHub**: [SanjayBarman15](https://github.com/SanjayBarman15)
 
 ## License
 
