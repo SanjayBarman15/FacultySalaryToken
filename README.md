@@ -11,7 +11,7 @@ The **FacultySalaryToken** project aims to enhance the management and distributi
 
 ## Contract Address
 
-- **Contract Address**: *[0x39414AF0485671109647f10d56f3C25e802Ac4c5
+- **Contract Address**: 0x39414AF0485671109647f10d56f3C25e802Ac4c5
 
 ## Future Scope
 
