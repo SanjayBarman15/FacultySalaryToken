@@ -63,11 +63,11 @@ The **FacultySalaryToken** project aims to enhance the management and distributi
 
 ## Future Scope 🔮
 
-🔐 **Enhanced Security**: Implement advanced security features to safeguard against vulnerabilities.  
-🚀 **Token Utility Expansion**: Explore additional uses and integrations for the token within the blockchain ecosystem.  
-🗳️ **Governance Features**: Introduce mechanisms for token holders to vote on important decisions affecting the contract.  
-📈 **Scalability Improvements**: Optimize the contract to handle larger transaction volumes and reduce costs.  
-🖥️ **User Interface Development**: Create a user-friendly interface for easier interaction with the contract.
+- 🔐 **Enhanced Security**: Implement advanced security features to safeguard against vulnerabilities.  
+- 🚀 **Token Utility Expansion**: Explore additional uses and integrations for the token within the blockchain ecosystem.  
+- 🗳️ **Governance Features**: Introduce mechanisms for token holders to vote on important decisions affecting the contract.  
+- 📈 **Scalability Improvements**: Optimize the contract to handle larger transaction volumes and reduce costs.  
+- 🖥️ **User Interface Development**: Create a user-friendly interface for easier interaction with the contract.
 
 ## Contact
 
