@@ -5,6 +5,14 @@
 
 The **FacultySalaryToken** project aims to enhance the management and distribution of faculty salaries through blockchain technology. By tokenizing salaries and integrating staking rewards, we provide a transparent and efficient system. This project is designed to streamline salary payments and offer additional benefits to faculty members, promoting a decentralized and modern approach to salary management.
 
+## Features ✨
+
+- **💸 Tokenized Salaries**: Faculty salaries are distributed as tokens.
+- **🔒 Staking Rewards**: Faculty can stake tokens to earn rewards over time.
+- **🛡️ Secure & Transparent**: Transactions occur on a secure and transparent blockchain.
+- **⚙️ Automated Distribution**: Salaries are automatically distributed by the contract.
+- **🌐 Decentralized Control**: Faculty manage their tokens autonomously.
+
 ## Flowchart
 
         +--------------------------------+
@@ -52,14 +60,6 @@ The **FacultySalaryToken** project aims to enhance the management and distributi
 ## Contract Address
 
 - **Contract Address**: 0x39414AF0485671109647f10d56f3C25e802Ac4c5
-
-## Features ✨
-
-- **Tokenized Salaries**: Faculty members receive their salaries in the form of tokens on the blockchain.
-- **Staking Rewards**: Faculty can stake their tokens to earn additional rewards, incentivizing long-term retention.
-- **Transparency & Security**: Payments are processed on a transparent and secure blockchain network.
-- **Automated Payments**: Salaries are distributed automatically at regular intervals, reducing administrative overhead.
-- **Decentralized**: Promotes a decentralized model for salary management, ensuring autonomy for faculty members.
 
 ## Future Scope 🔮
 
