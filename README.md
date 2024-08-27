@@ -27,8 +27,8 @@ The **FacultySalaryToken** project aims to enhance the management and distributi
 For inquiries or further information, please reach out to:
 
 - **Name**: Sanjay Barman
-- **Email**: [sanjay.barman@example.com](mailto:sanjaybarman1179@gmail.com)
-- **GitHub**: [SanjayBarman](https://github.com/SanjayBarman)
+- **Email**: [sanjaybarman1179@gmail.com](mailto:sanjaybarman1179@gmail.com)
+- **GitHub**: [SanjayBarman15](https://github.com/SanjayBarman15)
 
 ## License
 
