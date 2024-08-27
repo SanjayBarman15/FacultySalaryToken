@@ -11,8 +11,7 @@ The **FacultySalaryToken** project aims to enhance the management and distributi
 
 ## Contract Address
 
-- **Contract Address**: *[Insert your contract address here]*  
-  Use this address to interact with the FacultySalaryToken smart contract on the Ethereum network.
+- **Contract Address**: *[0x39414AF0485671109647f10d56f3C25e802Ac4c5
 
 ## Future Scope
 
