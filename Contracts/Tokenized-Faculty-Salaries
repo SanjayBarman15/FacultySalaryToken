@@ -1,0 +1,92 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.19;
+
+contract FacultySalaryToken {
+    string public name = "FacultySalaryToken";
+    string public symbol = "FST";
+    uint8 public decimals = 18;
+    uint256 public totalSupply;
+    address public owner;
+
+    // Mapping to keep track of balances and staking details
+    mapping(address => uint256) public balanceOf;
+    mapping(address => uint256) public stakingBalance;
+    mapping(address => uint256) public stakingTimestamp;
+    
+    uint256 public stakingRewardRate = 100; // Reward rate (e.g., 100 tokens per year)
+
+    // Events
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Mint(address indexed to, uint256 value);
+    event Stake(address indexed staker, uint256 amount);
+    event Unstake(address indexed staker, uint256 amount, uint256 reward);
+
+    constructor() {
+        owner = msg.sender;
+        // Mint initial supply to contract owner
+        mint(owner, 1000000 * 10 ** decimals);
+    }
+
+    // Modifier to restrict access to the owner
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Not the owner");
+        _;
+    }
+
+    // Function to mint new tokens
+    function mint(address to, uint256 amount) public onlyOwner {
+        require(to != address(0), "Invalid address");
+        require(amount > 0, "Amount must be greater than zero");
+        
+        totalSupply += amount;
+        balanceOf[to] += amount;
+        emit Mint(to, amount);
+    }
+
+    // Function to distribute salary tokens to faculty
+    function distributeSalary(address faculty, uint256 amount) external onlyOwner {
+        require(faculty != address(0), "Invalid address");
+        require(amount > 0, "Amount must be greater than zero");
+        require(balanceOf[owner] >= amount, "Insufficient balance");
+
+        balanceOf[owner] -= amount;
+        balanceOf[faculty] += amount;
+        emit Transfer(owner, faculty, amount);
+    }
+
+    // Function to allow faculty to stake their tokens
+    function stakeTokens(uint256 amount) external {
+        require(amount > 0, "Amount must be greater than zero");
+        require(balanceOf[msg.sender] >= amount, "Insufficient balance to stake");
+
+        balanceOf[msg.sender] -= amount;
+        stakingBalance[msg.sender] += amount;
+        stakingTimestamp[msg.sender] = block.timestamp;
+        emit Stake(msg.sender, amount);
+    }
+
+    // Function to allow faculty to unstake their tokens and claim rewards
+    function unstakeTokens() external {
+        uint256 stakedAmount = stakingBalance[msg.sender];
+        require(stakedAmount > 0, "No tokens staked");
+
+        // Calculate the staking duration and reward
+        uint256 stakingDuration = block.timestamp - stakingTimestamp[msg.sender];
+        uint256 reward = (stakedAmount * stakingRewardRate * stakingDuration) / (365 days * 100);
+
+        // Reset the staking balance and timestamp
+        stakingBalance[msg.sender] = 0;
+        stakingTimestamp[msg.sender] = 0;
+
+        // Transfer the staked tokens and rewards back to the faculty
+        balanceOf[address(this)] -= (stakedAmount + reward);
+        balanceOf[msg.sender] += (stakedAmount + reward);
+        emit Unstake(msg.sender, stakedAmount, reward);
+    }
+
+    // Function to set a new staking reward rate (only owner can set this)
+    function setStakingRewardRate(uint256 newRate) external onlyOwner {
+        require(newRate > 0, "Reward rate must be greater than zero");
+        stakingRewardRate = newRate;
+    }
+}
