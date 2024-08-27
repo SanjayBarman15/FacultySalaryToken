@@ -7,8 +7,47 @@ The **FacultySalaryToken** project aims to enhance the management and distributi
 
 ## Flowchart
 
-![Flowchart](path/to/flowchart.png)  
-*Note: Replace "path/to/flowchart.png" with the actual path to your flowchart image.*
+        +--------------------------------+
+        |      Contract Initialization   |
+        |   (Set Owner, Mint Initial     |
+        |   Supply of 1,000,000 FST)     |
+        +--------------------------------+
+                        |
+                        v
+        +--------------------------------+
+        |         Mint Tokens            |
+        | (Owner Mints New Tokens and    |
+        |   Adds Them to Total Supply)   |
+        +--------------------------------+
+                        |
+                        v
+        +--------------------------------+
+        |     Distribute Salary Tokens   |
+        | (Owner Sends Tokens to Faculty)|
+        +--------------------------------+
+                        |
+                        v
+        +--------------------------------+
+        |        Stake Tokens            |
+        | (Faculty Stakes Tokens and     |
+        |  Starts Earning Rewards)       |
+        +--------------------------------+
+                        |
+                        v
+        +--------------------------------+
+        |        Unstake Tokens          |
+        | (Faculty Unstakes Tokens and   |
+        |  Receives Staked Amount +      |
+        |   Reward Based on Duration)    |
+        +--------------------------------+
+                        |
+                        v
+        +--------------------------------+
+        | Set Staking Reward Rate (Owner)|
+        | (Owner Updates the Rate for    |
+        |   Future Staking Rewards)      |
+        +--------------------------------+
+
 
 ## Contract Address
 
